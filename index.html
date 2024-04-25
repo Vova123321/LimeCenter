@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>LimeCenter - Стабильная работа для вас</title>
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="ЛаймЦентр — лидер услуг телемаркетинга. В нашем call-центре вы найдете высококвалифицированных специалистов, отлаженные бизнес-процессы, пунктуальность и вежливость. Средствами call-center мы привлекаем и удерживаем ваших клиентов. Мы знаем как это делать и делаем с удовольствием.">
+	<meta name="author" content="ЛаймЦентр">
+	<meta name="keywords" content="Колл-центр, работа, звонки, поддержка, онлайн, Интернет, деньги, call-center">
+
+	<link rel="shortcut icon" href="./app/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="./app/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="./app/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="./app/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="./app/img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./app/css/normalize.min.css?v=4">
+	<link rel="stylesheet" href="./app/css/app.css?v=4">
+	<link rel="stylesheet" href="./app/css/main.css?v=4">
+</head>
+<body>
+	<header id="header">
+		<div class="header__outer">
+			<div class="header__top">
+				<div class="header__nav_btn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="header__brand">
+					<a href="#"><img src="./app/img/lime-brand.svg"></a>
+				</div>
+				<nav class="header__nav">
+					<ul>
+						<li><a href="#jobs">Работа</a></li>
+						<li><a href="#reviews">Отзывы</a></li>
+						<li><a href="#pros">О вакансии</a></li>
+						<li><a href="#solut">Решения</a></li>
+						<li><a href="#career">Карьера</a></li>
+						<li><a href="#news">Новости</a></li>
+						<li><a href="#feedback">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__link">
+					<a href="#feedback" class="btn__primary btn"><span><img src="./app/img/icon/send.svg"></span>Оставить резюме</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__intro">
+			<div class="container">
+				<div class="row">
+					<div class="header__title">
+						<h1>Заработок от<br><b>50 тысяч рублей</b><br>В Колл-центре</h1>
+						<p>Отличная зарплата, премии и профессиональный <br>рост в мире высокооплачиваемых возможностей. <br>Ваш путь к успеху начинается здесь!</p>
+						<button class="btn__primary btn btn__modal btn__tel" data-modal="modal1"><span><img src="./app/img/icon/call.svg"></span>Перезвоните мне</button>
+					</div>
+					<div class="header__img">
+						<span><img src="./app/img/lime-2.png"></span>
+						<span><img src="./app/img/headphones.png"></span>
+						<span><img src="./app/img/lime-3.png"></span>
+						<span><img src="./app/img/lime-2.png"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__scroll">
+			<div class="header__scroll_icon">
+				<span></span>
+				<span></span>
+			</div>Листайте вниз
+		</div>
+		<div class="header__nav_mobile">
+			<button class="header__nav_close btn"><img src="./app/img/icon/close.svg"></button>
+			<ul>
+				<li><a href="#jobs">Работа</a></li>
+				<li><a href="#reviews">Отзывы</a></li>
+				<li><a href="#pros">О вакансии</a></li>
+				<li><a href="#solut">Решения</a></li>
+				<li><a href="#career">Карьера</a></li>
+				<li><a href="#news">Новости</a></li>
+				<li><a href="#feedback">Контакты</a></li>
+			</ul>
+			<div class="header__nav_call">
+				<a href="#"><span><img src="./app/img/icon/call.svg"></span>+ 7 (499) 989-78-78</a>
+				<a href="#"><span><img src="./app/img/icon/mail.svg"></span>info@lime-center.com</a>
+				<a href="#"><span><img src="./app/img/icon/send.svg"></span>@limecenter_bot</a>
+			</div>
+		</div>
+
+		<div class="main__modal" modal="modal1">
+			<button class="btn btn__modal_close"><img src="./app/img/icon/close.svg"></button>
+
+			<div class="main__call">
+				<div class="main__call_video">
+					<h2>Расскажем о себе</h2>
+					<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+					<button class="btn__primary btn main__call_modal btn__disable" data-modal="modal1"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</button>
+				</div>
+				<form action="./app/call.php" method="POST" class="main__call_quiz" modal="modal1">
+					<h2>Заполните форму</h2>
+					<div class="main__call_input">
+						<span><img src="./app/img/icon/user.svg"></span>
+						<input type="text" name="main__call_name" placeholder="Фамилия Имя Очество" required>
+					</div>
+					<div class="main__call_input">
+						<span><img src="./app/img/icon/mail-2.svg"></span>
+						<input type="email" name="main__call_email" placeholder="Ваша почта @email" required>
+					</div>
+					<div class="main__call_input">
+						<span><img src="./app/img/icon/phone.svg"></span>
+						<input type="tel" name="main__call_phone" placeholder="Номер телефона +7" required>
+					</div>
+					<div class="main__call_input">
+						<span><img src="./app/img/icon/home.svg"></span>
+						<input type="text" name="main__call_city" placeholder="Ваш город" required>
+					</div>
+					<button class="btn__primary btn" type="submit"><span><img src="./app/img/icon/send.svg"></span>Отправить анкету</button>
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<main id="main" role="main">
+		<section id="jobs" class="main__jobs">
+			<h1><span>Работа в Lime Center</span></h1>
+			<div class="container">
+				<div class="row">
+					<div class="main__maps">
+						<div class="main__maps_card">
+							<ul>
+								<li><img src="./app/img/city/orsk/orsk-1.jpg"></li>
+								<li><img src="./app/img/city/novotroitsk/novotroitsk-1.jpg"></li>
+								<li><img src="./app/img/city/mednogorsk/mednogorsk-1.jpg"></li>
+								<li><img src="./app/img/city/novoorsk/novoorsk-1.jpg"></li>
+							</ul>
+							<!---<h2>Орск</h2>----->
+						</div>
+						<div class="main__maps_text">
+							Добро пожаловать в Lime Центр — место, где каждый разговор становится возможностью сделать чей-то день ярче, решить проблему или просто поддержать в трудный момент. Наш коллектив представляет собой сплоченную команду профессионалов, стремящихся к высшему качеству обслуживания и поддержки наших клиентов.
+							В Lime Центре мы понимаем, что каждый звонок важен. Служба поддержки — это не просто работа, это искусство нахождения оптимального решения для каждой ситуации. Наши операторы обучены быть терпеливыми, внимательными и эффективными в решении проблем. Мы гордимся своей способностью прислушиваться к клиентам и предлагать индивидуальные решения для каждой ситуации.
+						</div>
+						<div class="main__map">
+							<ul>
+								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Орск</span></a></li>
+								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Новотроицк</span></a></li>
+								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Медногорск</span></a></li>
+								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Новоорск</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="reviews" class="main__review">
+			<h1><span>Отзывы</span></h1>
+			<div class="container">
+				<div class="row">
+					<div class="review__slider">
+						<div class="review__items">
+							<div class="review__item">
+								<div class="review__img">
+									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<h3>Юли<b>я</b><small>Сотрудник</small></h3>
+								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+							</div>
+						</div>
+						<div class="review__items">
+							<div class="review__item">
+								<div class="review__img">
+									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<h3>Екатерин<b>а</b><small>Сотрудник</small></h3>
+								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+							</div>
+						</div>
+						<div class="review__items">
+							<div class="review__item">
+								<div class="review__img">
+									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<h3>Людмил<b>а</b><small>Сотрудник</small></h3>
+								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+							</div>
+						</div>
+						<div class="review__items">
+							<div class="review__item">
+								<div class="review__img">
+									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</div>
+								<h3>Юли<b>я</b><small>Сотрудник</small></h3>
+								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="pros" class="main__pros">
+			<h1><span>О вакансии</span></h1>
+			<div class="container">
+				<div class="row">
+					<div class="pros__chat">
+						<ul>
+							<li><span>Ставка от <b>180-220р/час</b><img src="./app/img/icon/emoji/money-1.png"></span></li>
+							<li><span>Гибкий <b>график</b><img src="./app/img/icon/emoji/calendar.png"></span></li>
+							<li><span>Премии <b>+ бонусы</b><img src="./app/img/icon/emoji/money-2.png"></span></li>
+							<li><span>Без <b>опыта</b><img src="./app/img/icon/emoji/toolbox.png"></span></li>
+							<li><span>Свободный график <b>отпусков</b><img src="./app/img/icon/emoji/beach.png"></span></li>
+							<li><span>Обучаем <b>сотрудников</b><img src="./app/img/icon/emoji/cap.png"></span></li>
+							<li><span>Приведи друга <b>- получай +500р каждый месяц к зарплате</b><img src="./app/img/icon/emoji/money-3.png"></span></li>
+						</ul>
+					</div>
+					<div class="pros__charge">
+						<h2>Ваши <b>обязаности</b></h2>
+						<ul>
+							<li>Прием входящих заявок</li>
+							<li>Обработка заявок</li>
+							<li>Исходящие звонки (Продажи)</li>
+							<li>Чаты</li>
+							<li>Поддержка на почтах</li>
+							<li>Техническая поддержка</li>
+						</ul>
+						<a href="#feedback" class="btn__primary btn"><span><img src="./app/img/icon/send.svg"></span>Оставить резюме</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="solut" class="main__solut">
+			<h1><span>Решения</span></h1>
+			<div class="container">
+				<div class="row">
+					<div class="solut__cards">
+						<div class="solut__card"><img src="./app/img/bank.jpg"><h3>Банк<b>и</b></h3></div>
+						<div class="solut__card"><img src="./app/img/strahcom.jpg"><h3>Страховые <b>компании</b></h3></div>
+						<div class="solut__card"><img src="./app/img/inetmagaz.jpg"><h3>Интернет <b>магазины</b></h3></div>
+						<div class="solut__card"><img src="./app/img/transcom.png"><h3>Транспортные и логистические <b>компании</b></h3></div>
+						<div class="solut__card"><img src="./app/img/turistcom.jpg"><h3>Туристические <b>компании</b></h3></div>
+						<div class="solut__card"><img src="./app/img/riteyl.png"><h3>Ритейл <b>(FMCG)</b></h3></div>
+						<div class="solut__card"><img src="./app/img/avtosalon.jpg"><h3>Авто<b>салоны</b></h3></div>
+						<div class="solut__card"><img src="./app/img/itcom.jpg"><h3>IT <b>Компании</b></h3></div>
+						<div class="solut__card"><img src="./app/img/medcentr.jpg"><h3>Медецинские <b>Центры</b></h3></div>
+						<div class="solut__card"><img src="./app/img/gosuch.jpg"><h3>Государственные <b>Учреждения</b></h3></div>
+						<div class="solut__card"><img src="./app/img/obshepit.jpg"><h3>Общественное <b>Питание</b></h3></div>
+						<div class="solut__card"><img src="./app/img/promuch.jpg"><h3>Промышленные <b>Предприятия</b></h3></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="career" class="main__career">
+			<h1><span>Строй карьеру</span></h1>
+			<h2>Построй свой путь от сотрудника до Директора!</h2>
+			<div class="container">
+				<div class="row">
+					<div class="career__number">
+						<ul>
+							<li><b>10к+</b><span>Сотрудников</span></li>
+							<li><b>20+</b><span>Городов</span></li>
+							<li><b>30+</b><span>Проектов</span></li>
+						</ul>
+					</div>
+					<div class="career__grow">
+						<ul>
+							<li><span><img src="./app/img/icon/operator.svg"></span>Оператор<i></i></li>
+							<li><span><img src="./app/img/icon/supervisor.svg"></span>Супервайзер<i></i></li>
+							<li><span><img src="./app/img/icon/usergroup.svg"></span>Руководитель <br>Группы<i></i></li>
+							<li><span><img src="./app/img/icon/usergroup-2.svg"></span>Директор Пяти <br>Групп<i></i></li>
+							<li class="career__crown"><span><img src="./app/img/icon/director.svg"></span>Операционный <br>Директор</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="news" class="main__news">
+			<h1><span>Новости</span></h1>
+			<div class="container">
+				<div class="row">
+					<div class="news__cards">
+						<div class="news__card">
+							<div class="news__img">
+								<img src="./app/img/post.png">
+							</div>
+							<div class="news__date">12.10.1997</div>
+							<h3>Случай в одном колл центре поразил всех.</h3>
+							<p>Колл-центр расширил штат операторов и предлагает вакансии с гибким графиком и зарплатой от 50 тыс. рублей. Опыт работы в сфере продаж или колл-центре приветствуется.</p>
+						</div>
+						<div class="news__card">
+							<div class="news__img">
+								<img src="./app/img/post.png">
+							</div>
+							<div class="news__date">12.10.1997</div>
+							<h3>Случай в одном колл центре поразил всех.</h3>
+							<p>Колл-центр расширил штат операторов и предлагает вакансии с гибким графиком и зарплатой от 50 тыс. рублей. Опыт работы в сфере продаж или колл-центре приветствуется.</p>
+						</div>
+						<div class="news__card">
+							<div class="news__img">
+								<img src="./app/img/post.png">
+							</div>
+							<div class="news__date">12.10.1997</div>
+							<h3>Случай в одном колл центре поразил всех.</h3>
+							<p>Колл-центр расширил штат операторов и предлагает вакансии с гибким графиком и зарплатой от 50 тыс. рублей. Опыт работы в сфере продаж или колл-центре приветствуется.</p>
+						</div>
+						<div class="news__card">
+							<div class="news__img">
+								<img src="./app/img/post.png">
+							</div>
+							<div class="news__date">12.10.1997</div>
+							<h3>Случай в одном колл центре поразил всех.</h3>
+							<p>Колл-центр расширил штат операторов и предлагает вакансии с гибким графиком и зарплатой от 50 тыс. рублей. Опыт работы в сфере продаж или колл-центре приветствуется.</p>
+						</div>
+						<div class="news__card">
+							<div class="news__img">
+								<img src="./app/img/post.png">
+							</div>
+							<div class="news__date">12.10.1997</div>
+							<h3>Случай в одном колл центре поразил всех.</h3>
+							<p>Колл-центр расширил штат операторов и предлагает вакансии с гибким графиком и зарплатой от 50 тыс. рублей. Опыт работы в сфере продаж или колл-центре приветствуется.</p>
+						</div>
+						<div class="news__card">
+							<div class="news__img">
+								<img src="./app/img/post.png">
+							</div>
+							<div class="news__date">12.10.1997</div>
+							<h3>Случай в одном колл центре поразил всех.</h3>
+							<p>Колл-центр расширил штат операторов и предлагает вакансии с гибким графиком и зарплатой от 50 тыс. рублей. Опыт работы в сфере продаж или колл-центре приветствуется.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="feedback" class="main__feedback">
+			<h1><span>Расскажи о себе</span></h1>
+		</section>
+	</main>
+	<footer id="footer">
+		<div class="footer__bottom">
+			<div class="footer__copy">© Lime Center. 2024</div>
+			<div class="footer__dev">
+				Разработка by <a href="https://t.me/Vovuslexx" target="_blank">Владимир Коновалов</a>
+			</div>
+			<ul class="footer__link">
+				<li><a href="#"><img src="./app/img/icon/phone.svg">+ 7 (499) 989-78-78</a></li>
+				<li><a href="#"><img src="./app/img/icon/mail-2.svg">info@lime-center.com</a></li>
+				<li><a href="#"><img src="./app/img/icon/telegram.svg">@limecenter_bot</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<a href="#" class="btn scrolltop"></a>
+
+	<script src="./app/libs/jquery/jquery.min.js?v=4"></script>
+	<script src="./app/libs/modernizr/modernizr.min.js?v=4"></script>
+	<script src="./app/libs/slick/slick.min.js?v=4"></script>
+	<script src="./app/js/app.js?v=4"></script>
+</body>
+</html>
