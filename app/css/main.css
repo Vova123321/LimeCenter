@@ -1425,7 +1425,7 @@ body.root {
     position: relative;
     padding-left: 45px;
     font-size: 1.2em;
-    fpnt=font-weight: 500;
+    font-weight: 500;
     cursor: pointer;
 }
 
