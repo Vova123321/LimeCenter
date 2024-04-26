@@ -163,6 +163,7 @@
     box-shadow: 0px 0px 30px 25px rgba(0, 0, 0, 0.2);
 }
 
+.main__quiz,
 .main__call,
 .news__date,
 .news__card,
@@ -176,7 +177,8 @@
 .review__slider .slick-next,
 .review__slider .slick-prev {
     background: rgba(var(--black-rgb), 0.8);
-    border: 1px solid rgba(var(--white-rgb), 0.05);
+    border: 1px solid rgba(var(--white-rgb), 0.15);
+    -webkit-backdrop-filter: var(--blur-50);
     backdrop-filter: var(--blur-50);
 }
 
@@ -255,6 +257,7 @@
 
 /*************************************************/
 
+.main__quiz_radio label,
 .scrolltop,
 .main__call_input input,
 .main__modal,
@@ -306,7 +309,7 @@
 
 /****************************************************/
 
-.main__feedback_row,
+.main__quiz,
 .main__call_video,
 .main__call,
 .career__number,

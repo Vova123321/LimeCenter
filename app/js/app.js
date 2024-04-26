@@ -1,4 +1,34 @@
 $(function() {
+    $('.main__quiz').submit(function(e) {
+        var $form = $(this);
+
+    $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        success: function(data) {
+          	$('#quiz1').toggleClass('active');
+        },
+        data: $form.serializeArray()
+    }).done(function() {
+    	alert('Данные были добавлены в бд');
+    }).fail(function(xhr, status, error) {
+            if(xhr.status == 400) {
+                alert('Неправильный формат имени.');
+            } else if(xhr.status == 409) {
+                alert('Такой телефон или почта уже существуют в базе данных.');
+            } else if(xhr.status == 500) {
+                alert('Ошибка сервера: ' + xhr.responseText);
+            }  else if(xhr.status == 401) {
+                alert('Не правильный формат E-mail')
+            } else {
+               	alert('Произошла ошибка: ' + error);
+            }
+            });
+        e.preventDefault(); 
+    });
+});
+
+$(function() {
     $('.main__call_quiz').submit(function(e) {
         var $form = $(this);
 
@@ -10,18 +40,45 @@ $(function() {
     		$('.main__call_video > .btn__primary').addClass('btn__disable');
         	$('.main__call_quiz').removeClass('open');
         	$('.main__modal').removeClass('open');
+        	$('body').removeClass('root');
         },
         data: $form.serializeArray()
     }).done(function() {
-    	
-    }).fail(function() {
-        alert('Заполните все поля корректно!');
-    });
+    	alert('Данные были добавлены в бд');
+    }).fail(function(xhr, status, error) {
+            if(xhr.status == 400) {
+                alert('Неправильный формат имени.');
+            } else if(xhr.status == 409) {
+                alert('Такой телефон или почта уже существуют в базе данных.');
+            } else if(xhr.status == 500) {
+                alert('Ошибка сервера: ' + xhr.responseText);
+            }  else if(xhr.status == 401) {
+                alert('Не правильный формат E-mail')
+            } else {
+               	alert('Произошла ошибка: ' + error);
+            }
+            });
         e.preventDefault(); 
     });
 });
 
 $(document).ready(function() {
+
+	$('#quiz1 .main__quiz_btn').on('click', function(){
+		setTimeout(function(){
+      		$('#quiz2 .main__quiz_btn').removeClass('btn__disable');
+   		}, 2000);
+	});
+
+	$('.main__quiz_btn').click(function(event) {
+		event.preventDefault();
+		$('.main__quiz_box').removeClass('active')
+		var num = $(this).attr('data-num');
+		$('#quiz'+num).addClass('active')
+		if ($('#quiz'+num).hasClass('active')) {
+			$(this).removeClass('active');
+		};
+	});
 
 	$('.main__call_modal').on('click', function(){
 		var modal_index = $(this).data('modal');

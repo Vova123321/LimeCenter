@@ -19,11 +19,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="./app/css/normalize.min.css?v=4">
-	<link rel="stylesheet" href="./app/css/app.css?v=4">
-	<link rel="stylesheet" href="./app/css/main.css?v=4">
+	<link rel="stylesheet" href="./app/css/normalize.min.css?v=7">
+	<link rel="stylesheet" href="./app/css/app.css?v=7">
+	<link rel="stylesheet" href="./app/css/main.css?v=7">
 </head>
 <body>
+
 	<header id="header">
 		<div class="header__outer">
 			<div class="header__top">
@@ -55,14 +56,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="header__title">
-						<h1>Заработок от<br><b>50 тысяч рублей</b><br>В Колл-центре</h1>
+						<h1>Заработок от<br><b>30 тысяч рублей</b><br>В Колл-центре</h1>
 						<p>Отличная зарплата, премии и профессиональный <br>рост в мире высокооплачиваемых возможностей. <br>Ваш путь к успеху начинается здесь!</p>
 						<button class="btn__primary btn btn__modal btn__tel" data-modal="modal1"><span><img src="./app/img/icon/call.svg"></span>Перезвоните мне</button>
 					</div>
 					<div class="header__img">
 						<span><img src="./app/img/lime-2.png"></span>
 						<span><img src="./app/img/headphones.png"></span>
-						<span><img src="./app/img/lime-3.png"></span>
+						<span><img src="./app/img/lime-2.png"></span>
 						<span><img src="./app/img/lime-2.png"></span>
 					</div>
 				</div>
@@ -86,9 +87,9 @@
 				<li><a href="#feedback">Контакты</a></li>
 			</ul>
 			<div class="header__nav_call">
-				<a href="#"><span><img src="./app/img/icon/call.svg"></span>+ 7 (499) 989-78-78</a>
-				<a href="#"><span><img src="./app/img/icon/mail.svg"></span>info@lime-center.com</a>
-				<a href="#"><span><img src="./app/img/icon/send.svg"></span>@limecenter_bot</a>
+				<a href="tel:74999897878"><span><img src="./app/img/icon/call.svg"></span>+ 7 (499) 989-78-78</a>
+				<a href="mailto:info@lime-center.com"><span><img src="./app/img/icon/mail.svg"></span>info@lime-center.com</a>
+				<a href="https://t.me/limecenter_bot"><span><img src="./app/img/icon/send.svg"></span>@limecenter_bot</a>
 			</div>
 		</div>
 
@@ -98,28 +99,34 @@
 			<div class="main__call">
 				<div class="main__call_video">
 					<h2>Расскажем о себе</h2>
-					<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<iframe src="https://www.youtube.com/embed/TtgCnSAtbs0?si=s6I3clqQlCDH__xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 					<button class="btn__primary btn main__call_modal btn__disable" data-modal="modal1"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</button>
 				</div>
 				<form action="./app/call.php" method="POST" class="main__call_quiz" modal="modal1">
 					<h2>Заполните форму</h2>
+
+					<!---------------------------------------------------->
 					<div class="main__call_input">
 						<span><img src="./app/img/icon/user.svg"></span>
 						<input type="text" name="main__call_name" placeholder="Фамилия Имя Очество" required>
 					</div>
+					<!---------------------------------------------------->
 					<div class="main__call_input">
 						<span><img src="./app/img/icon/mail-2.svg"></span>
 						<input type="email" name="main__call_email" placeholder="Ваша почта @email" required>
 					</div>
+					<!---------------------------------------------------->
 					<div class="main__call_input">
 						<span><img src="./app/img/icon/phone.svg"></span>
 						<input type="tel" name="main__call_phone" placeholder="Номер телефона +7" required>
 					</div>
+					<!---------------------------------------------------->
 					<div class="main__call_input">
 						<span><img src="./app/img/icon/home.svg"></span>
 						<input type="text" name="main__call_city" placeholder="Ваш город" required>
 					</div>
+					<!---------------------------------------------------->
 					<button class="btn__primary btn" type="submit"><span><img src="./app/img/icon/send.svg"></span>Отправить анкету</button>
 				</form>
 			</div>
@@ -165,37 +172,37 @@
 						<div class="review__items">
 							<div class="review__item">
 								<div class="review__img">
-									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=OWNtLL-mQXXeKzBy&amp;controls=0" frameborder="0" allow="none; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 								</div>
 								<h3>Юли<b>я</b><small>Сотрудник</small></h3>
-								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+								<a href="https://www.youtube.com/embed/utBSQaqpN9E?si=rqvaGxr703Z7clIL" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
 							</div>
 						</div>
 						<div class="review__items">
 							<div class="review__item">
 								<div class="review__img">
-									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<iframe src="https://www.youtube.com/embed/kADg2fL0AoA?si=F8BIBSiimHnOJZs4&amp;controls=0" frameborder="0" allow="none; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 								</div>
 								<h3>Екатерин<b>а</b><small>Сотрудник</small></h3>
-								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+								<a href="https://www.youtube.com/embed/kADg2fL0AoA" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
 							</div>
 						</div>
 						<div class="review__items">
 							<div class="review__item">
 								<div class="review__img">
-									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<iframe src="https://www.youtube.com/embed/NgtR0C9D10M?si=wkkO9Uy7yy0YVjqQ&amp;controls=0" frameborder="0" allow="none; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 								</div>
 								<h3>Людмил<b>а</b><small>Сотрудник</small></h3>
-								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+								<a href="https://www.youtube.com/embed/NgtR0C9D10M?si=wkkO9Uy7yy0YVjqQ" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
 							</div>
 						</div>
 						<div class="review__items">
 							<div class="review__item">
 								<div class="review__img">
-									<iframe src="https://www.youtube.com/embed/utBSQaqpN9E?si=Oa9Qt2wObH2xqIGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<iframe src="https://www.youtube.com/embed/mlRASJb5d5Q?si=jKy7G98WUboBw54p&amp;controls=0" frameborder="0" allow="none; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 								</div>
 								<h3>Юли<b>я</b><small>Сотрудник</small></h3>
-								<a href="https://www.youtube.com/watch?v=utBSQaqpN9E" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
+								<a href="https://www.youtube.com/embed/mlRASJb5d5Q?si=jKy7G98WUboBw54p" class="btn__primary btn" target="_blank"><span><img src="./app/img/icon/eye.svg"></span>Смотреть видео</a>
 							</div>
 						</div>
 					</div>
@@ -208,7 +215,7 @@
 				<div class="row">
 					<div class="pros__chat">
 						<ul>
-							<li><span>Ставка от <b>180-220р/час</b><img src="./app/img/icon/emoji/money-1.png"></span></li>
+							<li><span>Ставка от <b> 180-220р/час</b><img src="./app/img/icon/emoji/money-1.png"></span></li>
 							<li><span>Гибкий <b>график</b><img src="./app/img/icon/emoji/calendar.png"></span></li>
 							<li><span>Премии <b>+ бонусы</b><img src="./app/img/icon/emoji/money-2.png"></span></li>
 							<li><span>Без <b>опыта</b><img src="./app/img/icon/emoji/toolbox.png"></span></li>
@@ -237,18 +244,18 @@
 			<div class="container">
 				<div class="row">
 					<div class="solut__cards">
-						<div class="solut__card"><img src="./app/img/bank.jpg"><h3>Банк<b>и</b></h3></div>
-						<div class="solut__card"><img src="./app/img/strahcom.jpg"><h3>Страховые <b>компании</b></h3></div>
-						<div class="solut__card"><img src="./app/img/inetmagaz.jpg"><h3>Интернет <b>магазины</b></h3></div>
-						<div class="solut__card"><img src="./app/img/transcom.png"><h3>Транспортные и логистические <b>компании</b></h3></div>
-						<div class="solut__card"><img src="./app/img/turistcom.jpg"><h3>Туристические <b>компании</b></h3></div>
-						<div class="solut__card"><img src="./app/img/riteyl.png"><h3>Ритейл <b>(FMCG)</b></h3></div>
-						<div class="solut__card"><img src="./app/img/avtosalon.jpg"><h3>Авто<b>салоны</b></h3></div>
-						<div class="solut__card"><img src="./app/img/itcom.jpg"><h3>IT <b>Компании</b></h3></div>
-						<div class="solut__card"><img src="./app/img/medcentr.jpg"><h3>Медецинские <b>Центры</b></h3></div>
-						<div class="solut__card"><img src="./app/img/gosuch.jpg"><h3>Государственные <b>Учреждения</b></h3></div>
-						<div class="solut__card"><img src="./app/img/obshepit.jpg"><h3>Общественное <b>Питание</b></h3></div>
-						<div class="solut__card"><img src="./app/img/promuch.jpg"><h3>Промышленные <b>Предприятия</b></h3></div>
+						<div class="solut__card"><h3>Банк<b>и</b></h3></div>
+						<div class="solut__card"><h3>Страховые <b>компании</b></h3></div>
+						<div class="solut__card"><h3>Интернет <b>магазины</b></h3></div>
+						<div class="solut__card"><h3>Транспортные и логистические <b>компании</b></h3></div>
+						<div class="solut__card"><h3>Туристические <b>компании</b></h3></div>
+						<div class="solut__card"><h3>Ритейл <b>(FMCG)</b></h3></div>
+						<div class="solut__card"><h3>Авто<b>салоны</b></h3></div>
+						<div class="solut__card"><h3>IT <b>Компании</b></h3></div>
+						<div class="solut__card"><h3>Медецинские <b>Центры</b></h3></div>
+						<div class="solut__card"><h3>Государственные <b>Учреждения</b></h3></div>
+						<div class="solut__card"><h3>Общественное <b>Питание</b></h3></div>
+						<div class="solut__card"><h3>Промышленные <b>Предприятия</b></h3></div>
 					</div>
 				</div>
 			</div>
@@ -336,6 +343,140 @@
 		</section>
 		<section id="feedback" class="main__feedback">
 			<h1><span>Расскажи о себе</span></h1>
+
+			<div class="container">
+				<div class="row">
+					<form action="./app/feedback.php" method="POST" class="main__quiz">
+
+						<!---------------------------------------------------->
+						<div class="main__quiz_box active" id="quiz1">
+							<h2>Работали ранее в данной сфере?</h2>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb" id="rb1"  class="main__quiz_rb1" checked><label for="rb1">Нет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb" id="rb2" class="main__quiz_rb1" ><label for="rb2">Менее 3 лет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb" id="rb3" class="main__quiz_rb1" ><label for="rb3">Более 3 лет</label>
+							</div>
+
+							<div class="main__quiz_outer">
+								<a href="#" class="main__quiz_btn btn btn__primary" data-num="2"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+							</div>
+						</div>
+						<!---------------------------------------------------->
+						<div class="main__quiz_box" id="quiz2">
+							<h2>Познакомьтесь с нами</h2>
+
+							<iframe src="https://www.youtube.com/embed/TtgCnSAtbs0?si=s6I3clqQlCDH__xk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							<div class="main__quiz_outer">
+								<a href="#" class="main__quiz_btn btn btn__primary btn__disable" data-num="3"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+							</div>
+						</div>
+
+						<!---------------------------------------------------->
+						<div class="main__quiz_box" id="quiz3">
+							<h2>Как относитесь к сидячей работе?</h2>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb2" id="rb4"  class="main__quiz_rb1" checked><label for="rb4">Тяжело</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb2" id="rb5" class="main__quiz_rb1" ><label for="rb5">Хорошо</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb2" id="rb6" class="main__quiz_rb1" ><label for="rb6">Легко</label>
+							</div>
+
+							<div class="main__quiz_outer">
+								<a href="#" class="main__quiz_btn btn btn__primary" data-num="4"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+							</div>
+						</div>
+
+						<!---------------------------------------------------->
+						<div class="main__quiz_box" id="quiz4">
+							<h2>Какой у вас возраст?</h2>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb3" id="rb7"  class="main__quiz_rb1" checked><label for="rb7">До 17 лет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb3" id="rb8" class="main__quiz_rb1" ><label for="rb8">От 18 до 25 лет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb3" id="rb9" class="main__quiz_rb1" ><label for="rb9">От 26 до 35 лет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb3" id="rb10" class="main__quiz_rb1" ><label for="rb10">От 36 до 45 лет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb3" id="rb11" class="main__quiz_rb1" ><label for="rb11">От 46 лет</label>
+							</div>
+
+							<div class="main__quiz_outer">
+								<a href="#" class="main__quiz_btn btn btn__primary" data-num="5"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+							</div>
+						</div>
+						<!---------------------------------------------------->
+						<div class="main__quiz_box" id="quiz5">
+							<h2>Есть ли у вас ПК или Ноутбук + Наушники с микрофоном + Интернет?</h2>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb4" id="rb12"  class="main__quiz_rb1" checked><label for="rb12">Да</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb4" id="rb13" class="main__quiz_rb1" ><label for="rb13">Нет</label>
+							</div>
+
+							<div class="main__quiz_radio">
+								<input type="radio" name="rb4" id="rb14" class="main__quiz_rb1" ><label for="rb14">Не всё</label>
+							</div>
+
+							<div class="main__quiz_outer">
+								<a href="#" class="main__quiz_btn btn btn__primary" data-num="6"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+							</div>
+						</div>
+						<!---------------------------------------------------->
+						<div class="main__quiz_box" id="quiz6">
+							<h2>Заполните анкету</h2>
+
+							<div class="main__call_input">
+								<span><img src="./app/img/icon/user.svg"></span>
+								<input type="text" name="main__quiz_name" placeholder="Фамилия Имя Очество" required>
+							</div>
+							<div class="main__call_input">
+								<span><img src="./app/img/icon/mail-2.svg"></span>
+								<input type="email" name="main__quiz_email" placeholder="Ваша почта @email" required>
+							</div>
+							<div class="main__call_input">
+								<span><img src="./app/img/icon/phone.svg"></span>
+								<input type="tel" name="main__quiz_phone" placeholder="Номер телефона +7" required>
+							</div>
+							<div class="main__call_input">
+								<span><img src="./app/img/icon/home.svg"></span>
+								<input type="text" name="main__quiz_city" placeholder="Ваш город" required>
+							</div>
+
+							<div class="main__quiz_outer">
+								<span>Подтвердите свою анкету в Боте</span>
+								<button class="btn__primary btn" type="submit"><span><img src="./app/img/icon/telegram-2.svg"></span>Отправить Боту</button>
+							</div>
+						</div>
+						<!---------------------------------------------------->
+					</form>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer id="footer">
@@ -345,18 +486,18 @@
 				Разработка by <a href="https://t.me/Vovuslexx" target="_blank">Владимир Коновалов</a>
 			</div>
 			<ul class="footer__link">
-				<li><a href="#"><img src="./app/img/icon/phone.svg">+ 7 (499) 989-78-78</a></li>
-				<li><a href="#"><img src="./app/img/icon/mail-2.svg">info@lime-center.com</a></li>
-				<li><a href="#"><img src="./app/img/icon/telegram.svg">@limecenter_bot</a></li>
+				<li><a href="tel:74999897878"><img src="./app/img/icon/phone.svg">+ 7 (499) 989-78-78</a></li>
+				<li><a href="mailto:info@lime-center.com"><img src="./app/img/icon/mail-2.svg">info@lime-center.com</a></li>
+				<li><a href="https:/t.me/limecenter_bot"><img src="./app/img/icon/telegram.svg">@limecenter_bot</a></li>
 			</ul>
 		</div>
 	</footer>
 
 	<a href="#" class="btn scrolltop"></a>
 
-	<script src="./app/libs/jquery/jquery.min.js?v=4"></script>
-	<script src="./app/libs/modernizr/modernizr.min.js?v=4"></script>
-	<script src="./app/libs/slick/slick.min.js?v=4"></script>
-	<script src="./app/js/app.js?v=4"></script>
+	<script src="./app/libs/jquery/jquery.min.js?v=7"></script>
+	<script src="./app/libs/modernizr/modernizr.min.js?v=7"></script>
+	<script src="./app/libs/slick/slick.min.js?v=7"></script>
+	<script src="./app/js/app.js?v=7"></script>
 </body>
 </html>
