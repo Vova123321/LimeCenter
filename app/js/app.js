@@ -1,65 +1,65 @@
 $(function() {
-    $('.main__quiz').submit(function(e) {
-        var $form = $(this);
+	$('.main__quiz').submit(function(e) {
+		e.preventDefault();
+		var formData = new FormData(this);
 
-    $.ajax({
-        type: $form.attr('method'),
-        url: $form.attr('action'),
-        success: function(data) {
-          	$('#quiz1').toggleClass('active');
-        },
-        data: $form.serializeArray()
-    }).done(function() {
-    	alert('Данные были добавлены в бд');
-    }).fail(function(xhr, status, error) {
-            if(xhr.status == 400) {
-                alert('Неправильный формат имени.');
-            } else if(xhr.status == 409) {
-                alert('Такой телефон или почта уже существуют в базе данных.');
-            } else if(xhr.status == 500) {
-                alert('Ошибка сервера: ' + xhr.responseText);
-            }  else if(xhr.status == 401) {
-                alert('Не правильный формат E-mail')
-            } else {
-               	alert('Произошла ошибка: ' + error);
-            }
-            });
-        e.preventDefault(); 
-    });
+		fetch(this.action, {
+			method: this.method,
+			body: formData
+		})
+			.then(response => response.json())
+			.then(data => {
+				$('#quiz1').toggleClass('active');
+				alert('Данные были добавлены в бд');
+			})
+			.catch(error => {
+				if (error.status === 400) {
+					alert('Неправильный формат имени.');
+				} else if (error.status === 409) {
+					alert('Такой телефон или почта уже существуют в базе данных.');
+				} else if (error.status === 500) {
+					alert('Ошибка сервера: ' + error.responseText);
+				} else if (error.status === 401) {
+					alert('Не правильный формат E-mail')
+				} else {
+					alert('Произошла ошибка: ' + error);
+				}
+			});
+	});
 });
 
 $(function() {
-    $('.main__call_quiz').submit(function(e) {
-        var $form = $(this);
+	$('.main__call_quiz').submit(function(e) {
+		e.preventDefault();
+		var formData = new FormData(this);
 
-    $.ajax({
-        type: $form.attr('method'),
-        url: $form.attr('action'),
-        success: function(data) {
-            $('.main__call_quiz')[0].reset();
-    		$('.main__call_video > .btn__primary').addClass('btn__disable');
-        	$('.main__call_quiz').removeClass('open');
-        	$('.main__modal').removeClass('open');
-        	$('body').removeClass('root');
-        },
-        data: $form.serializeArray()
-    }).done(function() {
-    	alert('Данные были добавлены в бд');
-    }).fail(function(xhr, status, error) {
-            if(xhr.status == 400) {
-                alert('Неправильный формат имени.');
-            } else if(xhr.status == 409) {
-                alert('Такой телефон или почта уже существуют в базе данных.');
-            } else if(xhr.status == 500) {
-                alert('Ошибка сервера: ' + xhr.responseText);
-            }  else if(xhr.status == 401) {
-                alert('Не правильный формат E-mail')
-            } else {
-               	alert('Произошла ошибка: ' + error);
-            }
-            });
-        e.preventDefault(); 
-    });
+		fetch(this.action, {
+			method: this.method,
+			body: formData
+		})
+			.then(response => response.json())
+			.then(data => {
+				$('.main__call_quiz')[0].reset();
+				$('.main__call_video > .btn__primary').addClass('btn__disable');
+				$('.main__call_quiz').removeClass('open');
+				$('.main__modal').removeClass('open');
+				$('body').removeClass('root');
+				alert('Данные были добавлены в бд');
+			})
+			.catch(error => {
+				if (error.status === 400) {
+					alert('Неправильный формат имени.');
+				} else if (error.status === 409) {
+					alert('Такой телефон или почта уже существуют в базе данных.');
+				} else if (error.status === 500) {
+					alert('Ошибка сервера: ' + error.responseText);
+				} else if (error.status === 401) {
+					alert('Не правильный формат E-mail')
+				} else {
+					alert('Произошла ошибка: ' + error);
+				}
+			});
+	});
 });
 
 $(document).ready(function() {

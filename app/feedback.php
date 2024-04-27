@@ -59,10 +59,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       die("Ошибка при добавлении данных в базу данных: " . $conn->error);
   }
 
-  // Закрытие соединения с базой данных
-  $conn->close();
-
-
   $conn->close();
 }
 ?>
