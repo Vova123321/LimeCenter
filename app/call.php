@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_email_result = $conn->query($check_email_query);
     if ($check_email_result->num_rows > 0) {
         // Если почта уже существует в базе данных, возвращаем ошибку
-        http_response_code(409); // Конфликт
+        http_response_code(401); // Конфликт
         die("Почта уже существует в базе данных.");
     }
 

@@ -9,34 +9,44 @@ $(function() {
     		alert("Согласитесь с условиями перед подписью на них.");
     		e.preventDefault();
   		}
+		$('.quiz__error_success').removeClass('active');
+		$('.quiz__error_name').removeClass('active');
+		$('.quiz__error_server').removeClass('active');
+		$('.quiz__error_email').removeClass('active');
+		$('.quiz__error_phone').removeClass('active');
 
     	fetch(this.action, {
       		method: this.method,
       		body: formData
     	})
 
-      	.then(response => response.json())
-      	.then(data => {
-        	$('#quiz2 .main__quiz_btn').toggleClass('btn__disable');
-          	$('#quiz1').toggleClass('active');
-          	$('#quiz6').removeClass('active');
-          	$('.main__quiz')[0].reset();
-      	})
+		.then(response => {
+			if (response.ok) {
+				$('.quiz__error_success').toggleClass('active');
+				return response.json();
+			} else {
+				if (response.status === 400) {
+					$('.quiz__error_name').toggleClass('active');
+				} else if (response.status === 409) {
+					$('.quiz__error_phone').toggleClass('active');
+				} else if (response.status === 500) {
+					$('.quiz__error_server').toggleClass('active');
+				} else if (response.status === 401) {
+					$('.quiz__error_email').toggleClass('active');
+				}
+				$('.main__quiz')[0].reset();
+			}
+		})
+      	// .then(data => {
+        	// $('#quiz2 .main__quiz_btn').toggleClass('btn__disable');
+          // 	$('#quiz1').toggleClass('active');
+          // 	$('#quiz6').removeClass('active');
+          // 	$('.main__quiz')[0].reset();
+      	// })
       	.catch(error => {
-        	if (error.status === 400) {
-        		$('.quiz__error_name').toggleClass('active');
-        	} else if (error.status === 409) {
-          		$('.quiz__error_phone').toggleClass('active');
-        	} else if (error.status === 500) {
-          		$('.quiz__error_server').toggleClass('active');
-        	} else if (error.status === 401) {
-          		$('.quiz__error_email').toggleClass('active');
-        	} else {
-          		$('.quiz__error_success').toggleClass('active');
-        	}
-
+			  console.log(error)
         	$('.main__quiz')[0].reset();
-      	});
+      	})
   	});
 });
 
@@ -46,33 +56,43 @@ $(function() {
   	$('.main__call_quiz').submit(function(e) {
     	e.preventDefault();
     	var formData = new FormData(this);
+		$('.quiz__error_success').removeClass('active');
+		$('.call__error_name').removeClass('active');
+		$('.call__error_server').removeClass('active');
+		$('.call__error_email').removeClass('active');
+		$('.call__error_phone').removeClass('active');
 
     	fetch(this.action, {
       		method: this.method,
       		body: formData
     	})
-      	.then(response => response.json())
-      	.then(data => {
-        	$('.main__call_quiz')[0].reset();
-    		$('.main__call_video > .btn__primary').addClass('btn__disable');
-        	$('.main__call_quiz').removeClass('open');
-        	$('.main__modal').removeClass('open');
-        	$('body').removeClass('root');
-      })
-
-      .catch(error => {
-        	if (error.status === 400) {
-        		$('.call__error_name').toggleClass('active');
-        	} else if (error.status === 409) {
-          		$('.call__error_phone').toggleClass('active');
-        	} else if (error.status === 500) {
-          		$('.call__error_server').toggleClass('active'); $(this).removeClass('active');
-        	} else if (error.status === 401) {
-          		$('.call__error_email').toggleClass('active');
-        	} else {
-          		$('.quiz__error_success').toggleClass('active');
-        	}
-      	});
+		.then(response => {
+			if (response.ok) {
+				$('.quiz__error_success').toggleClass('active');
+				return response.json();
+			} else {
+				if (response.status === 400) {
+					$('.call__error_name').toggleClass('active');
+				} else if (response.status === 409) {
+					console.log('409')
+					$('.call__error_phone').toggleClass('active');
+				} else if (response.status === 500) {
+					$('.call__error_server').toggleClass('active');
+				} else if (response.status === 401) {
+					$('.call__error_email').toggleClass('active');
+				}
+			}
+		})
+      	// .then(data => {
+        	// $('.main__call_quiz')[0].reset();
+    		// $('.main__call_video > .btn__primary').addClass('btn__disable');
+        	// $('.main__call_quiz').removeClass('open');
+        	// $('.main__modal').removeClass('open');
+        	// $('body').removeClass('root');
+      	// })
+      	.catch(error => {
+        	console.log(error)
+	  	})
   	});
 });
 
@@ -134,7 +154,8 @@ $(document).ready(function() {
 	$('.btn__tel').on('click', function(){
 		setTimeout(function(){
       		$('.main__call_video > .btn__primary').removeClass('btn__disable');
-   		}, 15000);
+   		}, 1000);
+	// 	ИСПРАВИТЬ!!!!
 	});
 
 	$('.btn__modal_close').on('click', function(){
