@@ -19,9 +19,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-	<link rel="stylesheet" href="./app/css/normalize.min.css?v=7">
-	<link rel="stylesheet" href="./app/css/app.css?v=7">
-	<link rel="stylesheet" href="./app/css/main.css?v=7">
+	<link rel="stylesheet" href="./app/css/normalize.min.css?v=9">
+	<link rel="stylesheet" href="./app/css/app.css?v=9">
+	<link rel="stylesheet" href="./app/css/main.css?v=9">
 </head>
 <body>
 
@@ -34,7 +34,7 @@
 					<span></span>
 				</div>
 				<div class="header__brand">
-					<a href="#"><img src="./app/img/lime-brand.svg"></a>
+					<a href="/"><img src="./app/img/lime-brand.svg"></a>
 				</div>
 				<nav class="header__nav">
 					<ul>
@@ -87,7 +87,7 @@
 				<li><a href="#feedback">Контакты</a></li>
 			</ul>
 			<div class="header__nav_call">
-				<a href="tel:74999897878"><span><img src="./app/img/icon/call.svg"></span>+ 7 (499) 989-78-78</a>
+				<a href="tel:+73532276627"><span><img src="./app/img/icon/call.svg"></span>+7 (3532) 27-66-27</a>
 				<a href="mailto:info@lime-center.com"><span><img src="./app/img/icon/mail.svg"></span>info@lime-center.com</a>
 				<a href="https://t.me/limecenter_bot"><span><img src="./app/img/icon/send.svg"></span>@limecenter_bot</a>
 			</div>
@@ -105,11 +105,17 @@
 				</div>
 				<form action="./app/call.php" method="POST" class="main__call_quiz" modal="modal1">
 					<h2>Заполните форму</h2>
+					<div class="main__call_error">
+						<div class="call__error_name"><img src="./app/img/icon/danger.svg">Данное имя уже существует</div>
+						<div class="call__error_phone"><img src="./app/img/icon/danger.svg">Данный номер телефона уже есть в системе</div>
+						<div class="call__error_server"><img src="./app/img/icon/danger.svg">Ошибка сервера</div>
+						<div class="call__error_email"><img src="./app/img/icon/danger.svg">Данный E-mail адресс уже есть в системе</div>
+					</div>
 
 					<!---------------------------------------------------->
 					<div class="main__call_input">
 						<span><img src="./app/img/icon/user.svg"></span>
-						<input type="text" name="main__call_name" placeholder="Фамилия Имя Отчество" required>
+						<input type="text" name="main__call_name" placeholder="Фамилия Имя Очество" required>
 					</div>
 					<!---------------------------------------------------->
 					<div class="main__call_input">
@@ -154,10 +160,10 @@
 						</div>
 						<div class="main__map">
 							<ul>
-								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Орск</span></a></li>
-								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Новотроицк</span></a></li>
-								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Медногорск</span></a></li>
-								<li><a href="#"><img src="./app/img/icon/map-stick.svg"><span>Новоорск</span></a></li>
+								<li><a href="/orsk.html"><img src="./app/img/icon/map-stick.svg"><span>Орск</span></a></li>
+								<li><a href="/novotroitsk.html"><img src="./app/img/icon/map-stick.svg"><span>Новотроицк</span></a></li>
+								<li><a href="/mednogorsk.html"><img src="./app/img/icon/map-stick.svg"><span>Медногорск</span></a></li>
+								<li><a href="/novoorsk.html"><img src="./app/img/icon/map-stick.svg"><span>Новоорск</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -347,25 +353,24 @@
 			<div class="container">
 				<div class="row">
 					<form action="./app/feedback.php" method="POST" class="main__quiz">
-
 						<!---------------------------------------------------->
 						<div class="main__quiz_box active" id="quiz1">
 							<h2>Работали ранее в данной сфере?</h2>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="experience" id="rb1" value="Нет"  class="main__quiz_rb1" checked><label for="rb1">Нет</label>
+								<input type="radio" name="experience" value="Нет" id="rb1"><label for="rb1">Нет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="experience" id="rb2" value="Менее 3 лет" class="main__quiz_rb1" ><label for="rb2">Менее 3 лет</label>
+								<input type="radio" name="experience" value="Менее 3 лет" id="rb2"><label for="rb2">Менее 3 лет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="experience" id="rb3" value="Более 3 лет" class="main__quiz_rb1" ><label for="rb3">Более 3 лет</label>
+								<input type="radio" name="experience" value="Более 3 лет" id="rb3"><label for="rb3">Более 3 лет</label>
 							</div>
 
 							<div class="main__quiz_outer">
-								<a href="#" class="main__quiz_btn btn btn__primary" data-num="2"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+								<a href="#" class="main__quiz_disable main__quiz_btn btn btn__primary btn__disable" data-num="2"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
 							</div>
 						</div>
 						<!---------------------------------------------------->
@@ -383,19 +388,19 @@
 							<h2>Как относитесь к сидячей работе?</h2>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="work_type" id="rb4" value="Тяжело"  class="main__quiz_rb1" checked><label for="rb4">Тяжело</label>
+								<input type="radio" name="worktype" value="Тяжело" id="rb4"><label for="rb4">Тяжело</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="work_type" id="rb5" value="Хорошо" class="main__quiz_rb1" ><label for="rb5">Хорошо</label>
+								<input type="radio" name="worktype" value="Хорошо" id="rb5"><label for="rb5">Хорошо</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="work_type" id="rb6" value="Легко" class="main__quiz_rb1" ><label for="rb6">Легко</label>
+								<input type="radio" name="worktype" value="Легко" id="rb6"><label for="rb6">Легко</label>
 							</div>
 
 							<div class="main__quiz_outer">
-								<a href="#" class="main__quiz_btn btn btn__primary" data-num="4"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+								<a href="#" class="main__quiz_disable main__quiz_btn btn btn__primary btn__disable" data-num="4"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
 							</div>
 						</div>
 
@@ -404,27 +409,27 @@
 							<h2>Какой у вас возраст?</h2>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="age" id="rb7" value="До 17 лет"  class="main__quiz_rb1" checked><label for="rb7">До 17 лет</label>
+								<input type="radio" name="yourage" value="До 17 лет" id="rb7"><label for="rb7">До 17 лет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="age" id="rb8" value="От 18 до 25 лет" class="main__quiz_rb1" ><label for="rb8">От 18 до 25 лет</label>
+								<input type="radio" name="yourage" value="От 18 до 25 лет" id="rb8"><label for="rb8">От 18 до 25 лет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="age" id="rb9" value="От 26 до 35 лет" class="main__quiz_rb1" ><label for="rb9">От 26 до 35 лет</label>
+								<input type="radio" name="yourage" value="От 26 до 35 лет" id="rb9"><label for="rb9">От 26 до 35 лет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="age" id="rb10" value="От 36 до 45 лет" class="main__quiz_rb1" ><label for="rb10">От 36 до 45 лет</label>
+								<input type="radio" name="yourage" value="От 36 до 45 лет" id="rb10"><label for="rb10">От 36 до 45 лет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="age" id="rb11" value="От 46 лет" class="main__quiz_rb1" ><label for="rb11">От 46 лет</label>
+								<input type="radio" name="yourage" value="От 46 лет" id="rb11"><label for="rb11">От 46 лет</label>
 							</div>
 
 							<div class="main__quiz_outer">
-								<a href="#" class="main__quiz_btn btn btn__primary" data-num="5"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+								<a href="#" class="main__quiz_btn btn btn__primary btn__disable" data-num="5"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
 							</div>
 						</div>
 						<!---------------------------------------------------->
@@ -432,28 +437,36 @@
 							<h2>Есть ли у вас ПК или Ноутбук + Наушники с микрофоном + Интернет?</h2>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="equipment" id="rb12" value="Да"  class="main__quiz_rb1" checked><label for="rb12">Да</label>
+								<input type="radio" name="equipment" value="Да" id="rb12"><label for="rb12">Да</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="equipment" id="rb13" value="Нет" class="main__quiz_rb1" ><label for="rb13">Нет</label>
+								<input type="radio" name="equipment" value="Нет" id="rb13"><label for="rb13">Нет</label>
 							</div>
 
 							<div class="main__quiz_radio">
-								<input type="radio" name="equipment" id="rb14" value="Не всё" class="main__quiz_rb1" ><label for="rb14">Не всё</label>
+								<input type="radio" name="equipment" value="Не всё" id="rb14"><label for="rb14">Не всё</label>
 							</div>
 
 							<div class="main__quiz_outer">
-								<a href="#" class="main__quiz_btn btn btn__primary" data-num="6"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
+								<a href="#" class="main__quiz_btn btn btn__primary btn__disable" data-num="6"><span><img src="./app/img/icon/arrow-right-2.svg"></span>Далее</a>
 							</div>
 						</div>
 						<!---------------------------------------------------->
+						
 						<div class="main__quiz_box" id="quiz6">
 							<h2>Заполните анкету</h2>
 
+							<div class="main__quiz_error">
+								<div class="quiz__error_name"><img src="./app/img/icon/danger.svg">Данное имя уже существует</div>
+								<div class="quiz__error_phone"><img src="./app/img/icon/danger.svg">Данный номер телефона уже есть в системе</div>
+								<div class="quiz__error_server"><img src="./app/img/icon/danger.svg">Ошибка сервера</div>
+								<div class="quiz__error_email"><img src="./app/img/icon/danger.svg">Данный E-mail адресс уже есть в системе</div>
+							</div>
+
 							<div class="main__call_input">
 								<span><img src="./app/img/icon/user.svg"></span>
-								<input type="text" name="main__quiz_name" placeholder="Фамилия Имя Отчество" required>
+								<input type="text" name="main__quiz_name" placeholder="Фамилия Имя Очество" required>
 							</div>
 							<div class="main__call_input">
 								<span><img src="./app/img/icon/mail-2.svg"></span>
@@ -467,10 +480,18 @@
 								<span><img src="./app/img/icon/home.svg"></span>
 								<input type="text" name="main__quiz_city" placeholder="Ваш город" required>
 							</div>
+							<!---------------------------------------------------->
+
+							<div class="main__quiz_checked">
+								<input type="checkbox" id="cb1" name="privacy" checked><label for="cb1"><a href="./app/privacy.html" target="_blank">Я согласен с политикой конфиденциальности и использования запрашиваемых данных</a></label>
+							</div>
+							<div class="main__quiz_checked">
+								<input type="checkbox" id="cb2" name="agree" checked><label for="cb2">Согласен на рекламные рассылки</label>
+							</div>
 
 							<div class="main__quiz_outer">
 								<span>Подтвердите свою анкету в Боте</span>
-								<button class="btn__primary btn" type="submit"><span><img src="./app/img/icon/telegram-2.svg"></span>Отправить Боту</button>
+								<button class="main__quiz_check btn__primary btn" type="submit"><span><img src="./app/img/icon/telegram-2.svg"></span>Отправить Боту</button>
 							</div>
 						</div>
 						<!---------------------------------------------------->
@@ -486,7 +507,7 @@
 				Разработка by <a href="https://t.me/Vovuslexx" target="_blank">Владимир Коновалов</a>
 			</div>
 			<ul class="footer__link">
-				<li><a href="tel:74999897878"><img src="./app/img/icon/phone.svg">+ 7 (499) 989-78-78</a></li>
+				<li><a href="tel:+73532276627"><img src="./app/img/icon/phone.svg">+7 (3532) 27-66-27</a></li>
 				<li><a href="mailto:info@lime-center.com"><img src="./app/img/icon/mail-2.svg">info@lime-center.com</a></li>
 				<li><a href="https:/t.me/limecenter_bot"><img src="./app/img/icon/telegram.svg">@limecenter_bot</a></li>
 			</ul>
@@ -495,9 +516,9 @@
 
 	<a href="#" class="btn scrolltop"></a>
 
-	<script src="./app/libs/jquery/jquery.min.js?v=7"></script>
-	<script src="./app/libs/modernizr/modernizr.min.js?v=7"></script>
-	<script src="./app/libs/slick/slick.min.js?v=7"></script>
-	<script src="./app/js/app.js?v=7"></script>
+	<script src="./app/libs/jquery/jquery.min.js?v=9"></script>
+	<script src="./app/libs/modernizr/modernizr.min.js?v=9"></script>
+	<script src="./app/libs/slick/slick.min.js?v=9"></script>
+	<script src="./app/js/app.js?v=9"></script>
 </body>
 </html>

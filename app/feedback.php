@@ -6,8 +6,8 @@ require_once 'config.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // получение данных из формы
   $experience = $_POST["experience"];
-  $work_type = $_POST["work_type"];
-  $age = $_POST["age"];
+  $work_type = $_POST["worktype"];
+  $age = $_POST["yourage"];
   $equipment = $_POST["equipment"];
 
   $name = $_POST['main__quiz_name'];
