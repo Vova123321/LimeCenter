@@ -32,7 +32,7 @@ $(function() {
         	} else if (error.status === 401) {
           		$('.quiz__error_email').toggleClass('active');
         	} else {
-          		$('.quiz__error_server').toggleClass('active');
+          		$('.quiz__error_success').toggleClass('active');
         	}
 
         	$('.main__quiz')[0].reset();
@@ -70,7 +70,7 @@ $(function() {
         	} else if (error.status === 401) {
           		$('.call__error_email').toggleClass('active');
         	} else {
-          		$('.call__error_server').toggleClass('active');
+          		$('.quiz__error_success').toggleClass('active');
         	}
       	});
   	});

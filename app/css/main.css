@@ -1591,6 +1591,18 @@ body.root {
 	border-radius: 10px;
 }
 
+.quiz__error_success {
+	width: 100%;
+	display: none;
+	align-items: center;
+	border: 2px solid lightgreen;
+	padding: 15px 20px;
+	font-size: 1.1em;
+	font-weight: 600;
+	color: lightgreen;
+	border-radius: 10px;
+}
+
 .call__error_name.active,
 .call__error_phone.active,
 .call__error_server.active,
@@ -1599,6 +1611,10 @@ body.root {
 .quiz__error_phone.active,
 .quiz__error_server.active,
 .quiz__error_email.active {
+	display: flex;
+}
+
+.quiz__error_success.active {
 	display: flex;
 }
 
